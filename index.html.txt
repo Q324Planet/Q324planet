@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tinh cầu Q324</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: url('./Q324 Background.png') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .planet {
+      position: relative;
+      text-align: center;
+      color: #fff;
+      font-size: 3rem;
+      text-shadow: 0 0 15px #00ffff, 0 0 25px #00ffff;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+      }
+      to {
+        text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+      }
+    }
+
+    .orbit {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      animation: spin 30s linear infinite;
+    }
+
+    .satellite {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+    }
+
+    .sat1 { top: 0; left: 50%; transform: translateX(-50%); }
+    .sat2 { left: 0; top: 50%; transform: translateY(-50%); }
+    .sat3 { bottom: 0; left: 50%; transform: translateX(-50%); }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @media (max-width: 600px) {
+      .planet {
+        font-size: 2rem;
+      }
+      .orbit {
+        width: 200px;
+        height: 200px;
+      }
+      .satellite {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="planet">
+    Tinh cầu Q324
+    <div class="orbit">
+      <img src="./IMG_5699.PNG" class="satellite sat1" alt="Satellite 1">
+      <img src="./IMG_5700.PNG" class="satellite sat2" alt="Satellite 2">
+      <img src="./IMG_5701.PNG" class="satellite sat3" alt="Satellite 3">
+    </div>
+  </div>
+
+</body>
+</html>
